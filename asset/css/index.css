@@ -17,7 +17,7 @@ body {
   right: 0;
   left: 0;
   z-index: 1030;
-  background: #292929 !important;
+  background: #fafafa !important;
 }
 
 
@@ -209,165 +209,13 @@ body {
   position: fixed;
 }
 
-
-
-/* carousel control button Section */
-.carousel-control-prev {
-  left: 0;
-  transform: translate(550%, 47%);
-  font-size: 20px;
-  color: #74C69D !important;
-}
-
-.carousel-control-next {
-  right: 0;
-  transform: translateY(47%);
-  font-size: 20px;
-  color: #74C69D !important;
-}
-
-
-/* full-back is class behind carousel image */
-.full-back {
-  background: #222 !important;
-}
-
-
-/* left-place1 is for text on the left carousel image */
-.left-place1 {
+/*--Styling for fadding bootstrap Carousel--*/
+#myCarousel {
+  position: relative;
   width: 100%;
-  margin-top: 140px;
-  position: absolute;
-  top: 81%;
-  left: 96%;
-  transform: translate(-88%, -170%);
-  text-align: justify;
+  max-height: 100vh;
+  overflow: hidden !important;
 }
-
-/* left-place1 h1 text on the left*/
-.left-place1 h1 {
-  color: #74C69D !important;
-  font-size: 105px;
-  font-weight: 900;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* left-place1 p text on the left*/
-.left-place1 p {
-  color: whitesmoke !important;
-  font-size: 24px;
-  font-weight: 300;
-  text-align: justify;
-  font-family: 'Lato', sans-serif;
-  margin: 0 12% 4% 0;
-}
-
-
-/* button on the left*/
-.left-place1 .common-btn {
-  color: #74C69D;
-  font-size: 18px;
-  font-weight: 300;
-  font-family: 'Lato', sans-serif;
-  margin: 20px 0;
-  padding: 12px 30px;
-  background: transparent;
-  outline: none;
-  border: 2px solid #74C69D;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-
-/* is for image on the right of text */
-.carousel-item .right-place img {
-  width: 102%;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  object-fit: cover;
-  background-size: cover;
-}
-
-
-/* left-place2 is for text on the right carousel image 
-plus h1, p text, top & down and buttons*/
-.left-place2 {
-  width: 100%;
-  margin-top: 140px;
-  position: absolute;
-  text-align: center;
-  top: 70%;
-  left: 77%;
-  transform: translate(-60%, -130%);
-}
-
-.left-place2 h1 {
-  color: #74C69D !important;
-  font-size: 90px;
-  transform: translate(-20%, -13%);
-  font-weight: 900;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.left-place2 p {
-  color: whitesmoke;
-  font-size: 24px;
-  font-weight: 300;
-  text-align: right;
-  font-family: 'Lato', sans-serif;
-  margin: 0 25% 4% 0;
-}
-
-
-.left-place2 .top {
-  color: whitesmoke;
-  font-size: 24px;
-  font-weight: 300;
-  text-align: right;
-  font-family: 'Lato', sans-serif;
-  margin: 0 0 0 50% !important;
-}
-
-
-.left-place2 .common-btn {
-  color: #74C69D;
-  font-size: 18px;
-  font-weight: 300;
-  font-family: 'Lato', sans-serif;
-  margin: 20px -25% 0 0;
-  padding: 12px 30px;
-  background: transparent;
-  outline: none;
-  border: 2px solid #74C69D;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-
-
-
-/* this is for both top p text above h1 text in carousel--*/
-.left-place1 .top,
-.left-place2 .top {
-  color: whitesmoke !important;
-  font-size: 24px;
-  font-weight: 300;
-  text-align: justify;
-  font-family: 'Lato', sans-serif;
-  margin-bottom: -1%;
-}
-
-/*---button hover for both left and right in carousel--*/
-.left-place1 .common-btn:hover,
-.left-place2 .common-btn:hover {
-  color: whitesmoke !important;
-  background-color: transparent;
-  border: 2px solid whitesmoke;
-}
-
 
 /*--this is for button in the porfolio section--*/
 .common-btn {
