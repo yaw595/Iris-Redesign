@@ -18,10 +18,8 @@ $('.carousel').carousel({
     });*/
 
 
- 
-
-    $(document).ready(function() {
-        $("nav").click(function() {
-          $(this).toggleClass("_expand");
-        });
-      });
+$(document).ready(function() {
+  $("nav").click(function() {
+    $(this).toggleClass("_expand");
+  });
+});

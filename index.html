@@ -15,20 +15,12 @@
 
 <body>
     <!--Navbar Begins-->
-    <nav class="navbar  navbar-light bg-dark fixed-top" style="background: #222 !important;">
+    <nav class="navbar fixed-top">
 
         <a class="navbar-brand mx-5" href="#">
             <img src="asset/img/logo.png" alt="" height="50">
         </a>
-
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <!--this form is for Search Button-->
-                <form class="form-inline">
-                    <input type="submit" value="" class="search-submit">
-                    <input type="search" name="q" class="search-text" placeholder="Search..." autocomplete="off">
-                </form>
-            </li>
+        <ul class="nav">
             <li class="nav-item">
                 <nav>
                     <ul>
@@ -39,11 +31,19 @@
                         <li><a href="#">Project</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Contact</a></li>
+                        <li><a id="close" href="#"><i class="fad fa-times-circle fa-xs"></i></a></li>
                     </ul>
                 </nav>
             </li>
         </ul>
-
+        <!--this form is for Search Button-->
+        <form class="searchBox form-inline">
+            <input class="searchInput" type="search" name="q" placeholder="looking for?" autocomplete="off">
+            <button class="searchButton" type="submit">
+                <i class="fad fa-search fa-24px">
+                </i>
+            </button>
+        </form>
         <ul class="nav justify-content-end">
             <li class="nav-item">
                 <a class="nav-link" href="#">Sign In</a>
