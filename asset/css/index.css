@@ -53,72 +53,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-
-
-/* Search */
-.searchBox {
-  background: transparent;
-  border: 2px solid #2f3640;
-  border-radius: 40px;
-
-}
-
-.searchInput {
-  background: transparent;
-  border: none transparent;
-}
-
-.searchBox:hover>.searchInput,
-.searchInput:focus {
-  width: 240px;
-  padding: 0 20px;
-}
-
-.searchBox:hover>.searchButton {
-  background: white;
-  color: #2f3640;
-}
-
-.searchButton:focus {
-  border: none;
-  outline: none;
-  box-shadow: none;
-}
-
-.searchButton {
-  color: white;
-  background-color: #2f3640;
-  float: right;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s;
-}
-
-.searchInput {
-  border: none;
-  background: none;
-  outline: none;
-  float: left;
-  padding: 0;
-  color: white;
-  font-size: 16px;
-  transition: 0.4s;
-  line-height: 40px;
-  width: 0px;
-
-}
-
-@media screen and (max-width: 620px) {
-  .searchBox:hover>.searchInput {
-    width: 150px;
-    padding: 0 6px;
-  }
-}
-
-
 /* Menu Expand Button Section */
 .nav-item nav {
   position: relative;
@@ -144,7 +78,7 @@ body {
   font-weight: 600;
   z-index: 11;
   transition: all 0.3s;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Font Awesome Pro 5', sans-serif;
 }
 
 .nav-item nav ul {
@@ -199,24 +133,136 @@ body {
 
 /* Social Media Icons Section */
 .social-icons {   
-  left: 11%;
-  top: 94%;
-  transform: translate(-57%, 0);
-  color: #74C69D;
-  display: flex;
-  font-size: 25px;
+  left: 2%;
+  top: 50%;
+  font-size: 20px;
   z-index: 10 !important;
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  margin: 20px 0 !important;
+  color: rgb(0, 0, 0);
 }
 
 /*--Styling for fadding bootstrap Carousel--*/
 #myCarousel {
   position: relative;
   width: 100%;
-  max-height: 100vh;
+  height: 100vh;
   overflow: hidden !important;
+  background: #ffffff;
 }
 
+.carousel-inner .carousel-item {
+  width: 100%;
+  height: 100vh;
+}
+
+.carousel-inner .carousel-item.active {
+  transition: ease-in-out 0.2s;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  opacity: 0;
+}
+
+.carousel>.carousel-inner>.carousel-item>img,
+.carousel>.carousel-inner>.carousel-item>a>img {
+  margin: auto;
+  width: 100% !important;
+  transition: ease-in-out 0.5s;
+}
+
+.carousel-caption {
+  left: 0;
+  top: 15%;
+  right: 0;
+  width: 55%;
+  padding: 5% 10%;
+  color: #000 !important;
+  position: absolute;
+  text-align: left !important;
+
+}
+
+.carousel-item .carousel-caption h1 {
+  padding: 0;
+  font-size: 64px;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+  animation-duration: 0.8s;
+  animation-delay: 0.2s;
+}
+
+.carousel-item .carousel-caption p {
+  padding: 0;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  width: 50%;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+  color: rgb(90, 90, 90);
+}
+
+.carousel-caption .btn-lg {
+  color: #fff;
+  background: rgb(17, 0, 255);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 32px;
+  border: 4px solid rgba(17, 0, 255);
+  border-radius: 50px;
+  margin: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  animation-duration: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.carousel-caption .btn-lg:focus {
+  outline: transparent;
+  box-shadow: none;
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  color: black;
+  font-size: 20px;
+  width: 5%;
+  background: #fff;
+  height: 10%;
+  top: 90%;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  color: #000;
+}
+
+.carousel-control-prev {
+  left: 90%;
+}
+
+.carousel-control-next {
+  left: 95%;
+}
 /*--this is for button in the porfolio section--*/
 .common-btn {
   color: #74C69D;
@@ -416,7 +462,7 @@ figure.snip1204 .author h5 {
 
 /*--------footer-----*/
 footer {
-  padding: 2% 5% 0;
+  padding: 5%;
   width: 100%;
   background: #fafafa;
   height: 10%;
