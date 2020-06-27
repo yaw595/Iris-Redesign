@@ -36,7 +36,7 @@ body {
 
 /* Sign In Section */
 .nav-item .nav-link {
-  color: #74C69D;
+  color: #000;
   font-family: 'Lato', sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -45,7 +45,7 @@ body {
 /* Sign Up Section */
 .nav-item .sign {
   color: white !important;
-  background: #74C69D;
+  background: rgb(17, 0, 255);
   border-radius: 29px 29px 29px 29px;
   
   font-size: 18px;
@@ -73,7 +73,7 @@ body {
   transform: translateX(-50%);
   line-height: 80px;
   background: transparent;
-  color: #74C69D;
+  color: #000;
   font-size: 20px;
   font-weight: 600;
   z-index: 11;
@@ -90,7 +90,7 @@ body {
 }
 
 .nav-item ul li a {
-  color: #74C69D;
+  color: #000;
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
@@ -254,6 +254,10 @@ body {
   animation-delay: 0.2s;
 }
 
+
+
+
+
 .carousel-item .carousel-caption p {
   padding: 0;
   font-size: 20px;
@@ -312,27 +316,29 @@ body {
 .carousel-control-next {
   left: 95%;
 }
+
+
 /*--this is for button in the porfolio section--*/
 .common-btn {
-  color: #74C69D;
-  font-size: 18px;
-  font-weight: 300;
-  font-family: 'Lato', sans-serif;
-  margin: -8% 0 7% 85%;
-  padding: 1% 1%;
-  background: transparent;
-  outline: none;
-  border: 2px solid #74C69D;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none !important;
+    font-family: 'Lato', sans-serif;
+    margin: -8% 0 7% 80% !important;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #fff !important;
+    background: rgb(17, 0, 255);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 32px;
+    border: 4px solid rgba(17, 0, 255);
+    border-radius: 50px;
+    margin: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-.common-btn:hover {
-  color: #74c69d !important;
-  background-color: transparent;
-  border: 2px solid #74C69D;
-}
+
 
 
 /*----basic p text--- */
