@@ -1,177 +1,257 @@
-
-@import url('../fonts/Montserrat-Bold.ttf');
-@import url('../fonts/Lato-Light.ttf');
-
-
-
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Fira Sans',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 
-/*********************
-* Navbar, Search Icon, Menu, Sign In and Sign Up buttons Sections
-*/
+/* Navbar, Search Icon, Menu, Sign In and Sign Up buttons Sections*/
 /*Navbar Section */
-.navbar  {
-  position: fixed;
+.top-stuff {
   top: 0;
-  right: 0;
   left: 0;
-  z-index: 1030;
-  background: #fafafa !important;
-}
-
-
-/***********************
-* Sign In & Sign Up Section 
-*/
-.nav {
-  display: -ms-flexbox;
+  right: 0;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-  transform: translateX(-23%);
+  height: 100px;
 }
 
 
-/**************************
-* Sign In Section 
-*/
-.nav-item .nav-link {
-  color: #000;
-  font-family: 'Lato', sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-}
-
-/****************************
-* Sign Up Section 
-*/
-.nav-item .sign {
-  color: white !important;
-  background: rgb(17, 0, 255);
-  border-radius: 29px 29px 29px 29px;
-  
-  font-size: 18px;
-  font-weight: 800;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/*************************
-* Menu Expand Button Section 
-*/
-.nav-item nav {
+.top-stuff .logo {
+  font-size: 32px;
   position: relative;
-  width: 170px;
-  height: 80px;
-  background: transparent;
-  border-radius: 5px;
+  left: 50%;
+  top: 30px;
   cursor: pointer;
-  transition: all 0.4s;
-  overflow: hidden;
-  transform: translateX(30%);
+  z-index: 5;
 }
 
-.nav-item nav:before {
-  content: "Menu";
-  position: absolute;
-  left: 20%;
-  transform: translateX(-50%);
-  line-height: 80px;
-  background: transparent;
+.top-stuff .logo a {
   color: #000;
-  font-size: 20px;
-  font-weight: 600;
-  z-index: 11;
-  transition: all 0.3s;
-  font-family: 'Font Awesome Pro 5', sans-serif;
 }
 
-.nav-item nav ul {
-  display: flex;
-  line-height: 80px;
-  list-style: none;
-  align-content: center;
-  justify-content: center;
+.top-stuff .sign-in-up {
+  position: relative;
+  left: 92%;
+  top: 30px;
+  cursor: pointer;
+  z-index: 5;
+  text-align: right;
 }
 
-.nav-item ul li a {
-  color: #000;
+.top-stuff .sign-in-up a {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  text-align: center;
   font-size: 20px;
-  font-weight: 700;
   text-decoration: none;
-  margin: 0 -50px;
-  border-radius: 5px;
+  color: #222;
+}
+
+.menu-icon {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  left: 32px;
+  top: 30px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.menu-icon__line {
+  height: 2px;
+  width: 30px;
+  display: block;
+  background-color: #000000;
+  margin-bottom: 4px;
+  transition: transform 0.2s ease, background-color 0.5s ease;
+}
+
+.menu-icon__line-left {
+  width: 15px;
+}
+
+.menu-icon__line-right {
+  width: 15px;
+  float: right;
+}
+
+.nav {
+  position: fixed;
+  z-index: 3;
+}
+
+.nav:before,
+.nav:after {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(234, 234, 234, 0.2);
+  z-index: -1;
+  transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+  transform: translateX(0%) translateY(-100%);
+}
+
+.nav:after {
+  background: white;
+  transition-delay: 0s;
+}
+
+.nav:before {
+  transition-delay: 0.1s;
+}
+
+.nav__content {
+  position: fixed;
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: calc(2vw + 10px);
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.nav__list-item {
+  position: relative;
+  display: inline-block;
+  transition-delay: 0.8s;
   opacity: 0;
-  pointer-events: none;
-  transition: all 0.4s;
+  transform: translate(0%, 100%);
+  transition: opacity 0.2s ease, transform 0.3s ease;
+  margin: 0 25px;
+  text-decoration: none;
+  color: #000;
 }
 
-.nav-item ul li a i {
-  color: #ff0055 !important;
+.nav__list-item:before {
+  content: "";
+  position: absolute;
+  background: #000000;
+  width: 20px;
+  height: 1px;
+  top: 100%;
+  transform: translate(0%, 0%);
+  transition: all 0.3s ease;
+  z-index: -1;
+
 }
 
-.nav-item li a.active,
-.nav-item li a:hover {
-  background: transparent;
+.nav__list-item:hover:before {
+  width: 100%;
 }
 
-.nav-item nav._expand {
-  width: 840px;
+body.nav-active .menu-icon__line {
+  background-color: #000;
+
+  transform: translateX(0px) rotate(-45deg);
 }
 
-.nav-item nav._expand:before {
-  opacity: 0;
-  pointer-events: none;
+body.nav-active .menu-icon__line-left {
+  transform: translateX(1px) rotate(45deg);
 }
 
-.nav-item nav._expand ul li a {
-  margin: 0 10px;
-  padding: 10px;
+body.nav-active .menu-icon__line-right {
+  transform: translateX(-2px) rotate(45deg);
+}
+
+body.nav-active .nav {
+  visibility: visible;
+}
+
+body.nav-active .nav:before,
+body.nav-active .nav:after {
+  transform: translateX(0%) translateY(0%);
+}
+
+body.nav-active .nav:after {
+  transition-delay: 0.1s;
+}
+
+body.nav-active .nav:before {
+  transition-delay: 0s;
+}
+
+body.nav-active .nav__list-item {
   opacity: 1;
-  pointer-events: auto;
-  transition: all 0.4s;
+  transform: translateX(0%);
+  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
+body.nav-active .nav__list-item:nth-child(0) {
+  transition-delay: 0.5s;
+  text-decoration: none;
+  color: #000;
+}
+
+body.nav-active .nav__list-item:nth-child(1) {
+  transition-delay: 0.6s;
+  text-decoration: none;
+  color: #000;
+}
+
+body.nav-active .nav__list-item:nth-child(2) {
+  transition-delay: 0.7s;
+  text-decoration: none;
+  color: #000;
+}
+
+body.nav-active .nav__list-item:nth-child(3) {
+  transition-delay: 0.8s;
+  text-decoration: none;
+  color: #000;
+}
+
+body.nav-active .nav__list-item:nth-child(4) {
+  transition-delay: 0.9s;
+  text-decoration: none;
+  color: #000;
+}
+
+body.nav-active .nav__list-item:nth-child(5) {
+  transition-delay: 1s;
+  text-decoration: none;
+  color: #000;
+}
+
+body.nav-active .nav__list-item:nth-child(6) {
+  transition-delay: 1s;
+  text-decoration: none;
+  color: #000;
+}
 
 
 /******************
 * Main background image, Card & logotext
 */
-main img {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+.row-center {
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+  .login-card {
+    padding: 10%;
+    margin: 27% 0 8% 0;
     position: relative;
+    width: 100% !important;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 5px 50px rgb(180, 180, 180, 0.2);
   }
 
-.carousel-caption h1 {
-    padding: 0;
-    font-size: 50px;
-    font-family: 'Montserrat', Helvetica, sans-serif;
-    font-weight: 300;
-    margin-bottom: 50%;
-    color: black;
+  .login-card h1 {
+    color: rgb(83, 83, 83);
+    text-align: center;
+    text-transform: capitalize !important;
+    font-size: 32px;
   }
-
- 
-  .card {
-    padding: 2%;
-    margin: 0;
-    width: 50%;
-    height: 80vh;
-    background: #fafafa !important;
-  }
-
-  .carousel-caption .logotext h1 {    
-    margin: 139% -180% 0% 0%;
-    color: #000;
-  }
+  
 
 
 
@@ -180,9 +260,9 @@ main img {
 * Form, Log input, otherPasslink & button
 */
   form {
-    width: 500px;
-    margin: -38% 10% 0 10%;
+    width: 100%;
     align-items: center;
+    margin: 5% 0;
 }
 
 
@@ -201,7 +281,7 @@ main img {
 	transition: .3s;
 }
 
-.input-div > div{
+.input-div > div {
     position: relative;
     height: 45px;
     
@@ -210,7 +290,7 @@ main img {
     border-bottom: 2px solid #d9d9d9;
 }
 
-.input-div > div > h5{
+.input-div > div > h5 {
 	position: absolute;
 	left: 10px;
 	top: 50%;
@@ -243,8 +323,9 @@ main img {
 
 .input-div.focus > div > h5{
 	top: -5px;
-	font-size: 12px;
+	font-size: 15px;
 }
+
 
 .input-div > div > input{
 	position: absolute;
@@ -256,7 +337,7 @@ main img {
 	outline: none;
 	background: none;
 	padding: 0.5rem 0.7rem;
-	font-size: 12px;
+	font-size: 1.2rem;
 	color: #555 !important;
     font-family: 'Font Awesome Pro 5', sans-serif;
 }
@@ -279,7 +360,7 @@ main img {
 	text-decoration: none;
 }
 
-.otherPasslink p {
+.otherPasslink  .forgetPass {
     
 	color: rgb(43, 43, 43);
     font-size: 13px;
@@ -293,11 +374,11 @@ main img {
   font-size: 16px;
   font-weight: 700;
   padding: 8px 32px;
+  width: 100%;
   border: 4px solid rgba(17, 0, 255);
   border-radius: 50px;
-  margin: 20px;
+  margin: 40px 0 20px 0;
   letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
-	text-decoration: none;
 }
