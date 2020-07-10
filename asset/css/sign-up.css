@@ -10,6 +10,8 @@ body {
 
 /* Navbar, Search Icon, Menu, Sign In and Sign Up buttons Sections*/
 /*Navbar Section */
+/* Navbar, Search Icon, Menu, Sign In and Sign Up buttons Sections*/
+/*Navbar Section */
 .top-stuff {
   top: 0;
   left: 0;
@@ -32,6 +34,7 @@ body {
   color: #000;
   text-decoration: none;
 }
+
 
 .top-stuff .sign-in-up {
   position: relative;
@@ -80,7 +83,6 @@ body {
 
 .nav {
   position: fixed;
-  z-index: 3;
 }
 
 .nav:before,
@@ -160,6 +162,7 @@ body.nav-active .menu-icon__line-right {
 
 body.nav-active .nav {
   visibility: visible;
+  z-index: 3;
 }
 
 body.nav-active .nav:before,
@@ -222,7 +225,6 @@ body.nav-active .nav__list-item:nth-child(6) {
   text-decoration: none;
   color: #000;
 }
-
 
 /******************
 * Main background image, Card & logotext
