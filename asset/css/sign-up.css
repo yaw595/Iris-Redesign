@@ -30,6 +30,7 @@ body {
 
 .top-stuff .logo a {
   color: #000;
+  text-decoration: none;
 }
 
 .top-stuff .sign-in-up {
