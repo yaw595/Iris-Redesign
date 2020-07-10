@@ -1,5 +1,5 @@
-@import url('../fonts/Montserrat-Bold.ttf');
-@import url('../fonts/Lato-Light.ttf');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 
 
@@ -387,7 +387,7 @@ body.nav-active .nav__list-item:nth-child(6) {
   padding: 0 10%;
 }
 
-.tite h1{
+.title h1{
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-weight: 200;
   font-size: 64px;
