@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-
+@import url('../iris-fonts/Montserrat-ExtraLight');
 
 body {
   margin: 0;
@@ -389,7 +386,7 @@ body.nav-active .nav__list-item:nth-child(6) {
 
 .title h1{
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-weight: 200;
+  font-weight: 100;
   font-size: 64px;
   margin: 0 0 5% 0;
   color: #000000;
