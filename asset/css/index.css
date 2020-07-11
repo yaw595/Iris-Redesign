@@ -381,7 +381,8 @@ body.nav-active .nav__list-item:nth-child(6) {
 
 .testimonials,
 .clients {
-  padding: 5% 5%;
+  background: #fafafa;
+  padding: 10%;
 }
 
 .text-stuff {
@@ -474,12 +475,9 @@ figure.snip1204 {
   position: relative;
   overflow: hidden;
   margin: 10px;
-  min-width: 220px;
-  max-width: 310px;
   width: 100%;
   color: #333;
   text-align: left;
-  box-shadow: none !important;
 }
 
 
@@ -488,6 +486,9 @@ figure.snip1204 * {
   box-sizing: border-box;
 }
 
+.testimon .rown .col-md-4 {
+  background: transparent !important;
+}
 
 figure.snip1204 img {
   max-width: 100%;
@@ -499,21 +500,21 @@ figure.snip1204 img {
   z-index: 1;
   position: absolute;
   right: 65%;
+  object-fit: cover;
 }
 
 
 figure.snip1204 blockquote {
   margin: 0;
   display: block;
-  border-radius: 8px;
   position: relative;
-  background-color: #fafafa;
+  background-color: #fff;
   padding: 30px 50px 65px 50px;
   font-size: 0.8em;
   font-weight: 500;
   margin: 0 0 -40px;
   line-height: 1.6em;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 3px 20px rgba(234, 234, 234, 0.2);
 }
 
 
