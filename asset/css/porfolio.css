@@ -83,6 +83,7 @@ body {
   
   .nav {
     position: fixed;
+    z-index: -1 !important;
   }
   
   .nav:before,
@@ -162,7 +163,7 @@ body {
   
   body.nav-active .nav {
     visibility: visible;
-    z-index: 3;
+    z-index: 3 !important;
   }
   
   body.nav-active .nav:before,
