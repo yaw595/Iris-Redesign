@@ -381,7 +381,7 @@ body.nav-active .nav__list-item:nth-child(6) {
 
 .testimonials,
 .clients {
-  background: #fafafa;
+  background: #fff;
   padding: 10%;
 }
 
@@ -508,13 +508,13 @@ figure.snip1204 blockquote {
   margin: 0;
   display: block;
   position: relative;
-  background-color: #fff;
+  background: #fafafa;
   padding: 30px 50px 65px 50px;
   font-size: 0.8em;
   font-weight: 500;
   margin: 0 0 -40px;
   line-height: 1.6em;
-  box-shadow: 2px 3px 20px rgba(234, 234, 234, 0.2);
+  box-shadow: 2px 3px 20px rgba(124, 124, 124, 0.2);
 }
 
 
