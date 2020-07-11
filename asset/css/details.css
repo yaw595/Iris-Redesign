@@ -1,16 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@300&display=swap');
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Fira Sans',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  
-  /* Navbar, Search Icon, Menu, Sign In and Sign Up buttons Sections*/
-  /*Navbar Section */
-  .top-stuff {
+}
+
+
+/* Navbar, Search Icon, Menu, Sign In and Sign Up buttons Sections*/
+/*Navbar Section */
+/* Navbar, Search Icon, Menu, Sign In and Sign Up buttons Sections*/
+/*Navbar Section */
+.top-stuff {
     top: 0;
     left: 0;
     right: 0;
@@ -27,10 +29,11 @@ body {
     cursor: pointer;
     z-index: 5;
   }
-
+  
   .top-stuff .logo a {
     color: #000;
-}
+    text-decoration: none;
+  }
   
   
   .top-stuff .sign-in-up {
@@ -80,7 +83,6 @@ body {
   
   .nav {
     position: fixed;
-    z-index: 3;
   }
   
   .nav:before,
@@ -160,6 +162,7 @@ body {
   
   body.nav-active .nav {
     visibility: visible;
+    z-index: 3;
   }
   
   body.nav-active .nav:before,
@@ -216,7 +219,7 @@ body {
     text-decoration: none;
     color: #000;
   }
-
+  
   body.nav-active .nav__list-item:nth-child(6) {
     transition-delay: 1s;
     text-decoration: none;
@@ -260,7 +263,7 @@ body {
   */
   .services {
     background-color: rgb(235, 235, 235);
-    padding: 15% 10% 12% 10%;
+    padding: 8% 10% 12% 10%;
 }
 
 
@@ -270,7 +273,7 @@ body {
     padding: 0 10%;
 }
 
-.text-stuff .tite h1 {
+.text-stuff .title h1 {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 200;
     font-size: 64px;

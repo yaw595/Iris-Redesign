@@ -1,16 +1,20 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@300&display=swap');
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Fira Sans',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  
-  /* Navbar, Search Icon, Menu, Sign In and Sign Up buttons Sections*/
-  /*Navbar Section */
-  .top-stuff {
+}
+
+
+/* Navbar, Search Icon, Menu, Sign In and Sign Up buttons Sections*/
+/*Navbar Section */
+/* Navbar, Search Icon, Menu, Sign In and Sign Up buttons Sections*/
+/*Navbar Section */
+.top-stuff {
     top: 0;
     left: 0;
     right: 0;
@@ -27,10 +31,11 @@ body {
     cursor: pointer;
     z-index: 5;
   }
-
+  
   .top-stuff .logo a {
     color: #000;
-}
+    text-decoration: none;
+  }
   
   
   .top-stuff .sign-in-up {
@@ -80,7 +85,6 @@ body {
   
   .nav {
     position: fixed;
-    z-index: 3;
   }
   
   .nav:before,
@@ -160,6 +164,7 @@ body {
   
   body.nav-active .nav {
     visibility: visible;
+    z-index: 3;
   }
   
   body.nav-active .nav:before,
@@ -216,16 +221,16 @@ body {
     text-decoration: none;
     color: #000;
   }
-
+  
   body.nav-active .nav__list-item:nth-child(6) {
     transition-delay: 1s;
     text-decoration: none;
     color: #000;
   }
-  
-  
-  /* Social Media Icons Section */
-  .social-icons {   
+
+
+/* Social Media Icons Section */
+.social-icons {
     left: 2%;
     top: 50%;
     font-size: 20px;
@@ -236,55 +241,163 @@ body {
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
-  }
-  
-  .social-icons a {
+}
+
+.social-icons a {
     margin: 20px 0 !important;
     color: #2e2e2e;
     ;
-  }
-  
-  .social-icons .line {
+}
+
+.social-icons .line {
     background: #adadad;
     width: 1px;
     height: 300px;
-  }
+}
 
-  
-  /*--------footer-----*/
-footer {
-    padding: 5%;
-    width: 100%;
-    background: #fafafa;
-    height: 10%;
+
+  /******************
+  * Main background image, Card & logotext
+  */
+  .row-center {
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    margin: auto;
   }
   
-  footer h1 {
-    font-size: 24px;
-    font-weight: 400;
-    text-align: justify;
-    font-family: 'Lato', sans-serif;
-  }
+    .login-card {
+      padding: 0;
+      margin: 35% 0 0 0;
+      position: absolute;
+      width: 100% !important;
+      border: none;
+    }
   
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-  
-  li {
-    list-style: none;
-    text-decoration: none;
-  }
-  
-  li a {
-    margin: 0;
-    line-height: 26px;
-    font-size: 15px;
-    color: #999;
-    text-decoration: none;
-  }
-  
-  li a:hover {
+    .login-card h1 {
+      color: rgb(83, 83, 83);
+      text-align: center;
+      text-transform: capitalize !important;
+      font-size: 64px;
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    }
     
-    text-decoration: none;
+  
+  
+  
+  
+  /********************
+  * Form, Log input, otherPasslink & button
+  */
+    form {
+      width: 100%;
+      align-items: center;
+      margin: 5% 0;
   }
+  
+  
+  .login-content .input-div.one{
+    margin-top: 0;
+  }
+  
+  .i{
+    color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .i i{
+    transition: .3s;
+  }
+  
+  .input-div > div {
+      position: relative;
+      height: 45px;
+      
+      margin: 25px 0;
+      padding: 5px 0;
+      border-bottom: 2px solid #d9d9d9;
+  }
+  
+  .input-div > div > h5 {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+    transition: .3s;
+  }
+  
+  .input-div:before, .input-div:after{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    transition: .4s;
+  }
+  
+  .input-div:before{
+    right: 50%;
+  }
+  
+  .input-div:after{
+    left: 50%;
+  }
+  
+  .input-div.focus:before, .input-div.focus:after{
+    width: 50%;
+  }
+  
+  .input-div.focus > div > h5{
+    top: -5px;
+    font-size: 15px;
+  }
+  
+  
+  .input-div > div > input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    color: #555 !important;
+      font-family: 'Roboto',Arial, Helvetica, sans-serif;
+  }
+  
+  .input-div.pass{
+    margin-bottom: 4px;
+  }
+  
+  
+  
+  
+  .btn {
+    color: #fff;
+    background: rgb(17, 0, 255);
+    font-size: 16px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    padding: 8px 32px;
+    width: 100%;
+    border: 4px solid rgba(17, 0, 255);
+    border-radius: 50px;
+    margin: 40px 0 20px 0;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .btn:hover {
+    color: #fff;
+  }
+  
+ 
