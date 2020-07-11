@@ -1,4 +1,8 @@
-@import url('../iris-fonts/Montserrat-ExtraLight.ttf');
+@font-face {
+  font-family: header;
+  src: url(../iris-fonts/Montserrat-ExtraLight.ttf);
+  font-weight: lighter !important;
+}
 
 body {
   margin: 0;
@@ -383,8 +387,7 @@ body.nav-active .nav__list-item:nth-child(6) {
 }
 
 .title h1{
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-weight: 200;
+  font-family: header, Arial, Helvetica, sans-serif;
   font-size: 64px;
   margin: 0 0 5% 0;
   color: #000000;
@@ -557,6 +560,18 @@ figure.snip1204 .author h5 {
   margin: 0;
   font-weight: 300;
   color: #000000;
+}
+
+
+/*----owl carousel for trusted clients----*/
+.owl-carousel {
+  display: flex;
+}
+
+.owl-carousel img {
+  width: 100%;
+  height: 100%;
+  padding: 0 5%;
 }
 
 
