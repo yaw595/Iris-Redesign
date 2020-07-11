@@ -1,8 +1,4 @@
-@font-face {
-  font-family: header;
-  src: url(../iris-fonts/Montserrat-ExtraLight.ttf);
-  font-weight: lighter !important;
-}
+
 
 body {
   margin: 0;
@@ -387,14 +383,15 @@ body.nav-active .nav__list-item:nth-child(6) {
 }
 
 .title h1{
-  font-family: header, Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 200 !important;
   font-size: 64px;
   margin: 0 0 5% 0;
   color: #000000;
 }
 
 .left {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: detail-text, Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 300;
   display: flex;
@@ -414,7 +411,7 @@ body.nav-active .nav__list-item:nth-child(6) {
 
 .ser-text {
   color: #2e2e2e;
-  font-family: 'Roboto',
+  font-family: detail-text,
   Arial,
   Helvetica,
   sans-serif;
